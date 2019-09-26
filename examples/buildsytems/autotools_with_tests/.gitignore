@@ -1,0 +1,15 @@
+*~
+*.in
+*.o
+aclocal.m4
+stamp-h1
+depcomp
+install-sh
+compile
+configure
+autom4te.cache/
+missing
+test-driver
+config.log
+config.status
+Makefile

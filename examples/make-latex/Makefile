@@ -7,7 +7,7 @@ $(info $$GITID is [${GITID}])
 
 
 
-%.pdf:%.tex 02-assignment.tex $(FIGURES)
+%.pdf:%.tex 02-assignment.tex common.tex $(FIGURES)
 ifdef GITID
 	./vc
 else

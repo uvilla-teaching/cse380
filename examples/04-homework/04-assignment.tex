@@ -1,0 +1,120 @@
+\documentclass[letterpaper,12pt]{article}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{9.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\columnsep}{0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\topskip}{0in}
+\usepackage{times}
+\usepackage{mdwlist}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{parskip}
+\hypersetup{colorlinks=true}
+\renewcommand{\baselinestretch}{1.00}
+\DeclareMathOperator{\erf}{erf}
+
+\newcounter{exanum}
+\setcounter{exanum}{1}
+\newcommand{\exercise}{\subsubsection*{Exercise \#\theexanum: \refstepcounter{exanum}}}
+
+\newcommand{\duedate}{end of day, October 31, 2019}
+
+\input{vc}
+\input{common}
+
+\begin{document}
+\begin{flushright}
+\VCDateISO \\
+Rev: \VCRevision
+\end{flushright}
+
+\vspace*{0.05cm}
+\subsection*{Tools and Techniques for Computational Science - \courseyear{}}
+\vspace*{-.2cm}
+{{\large \em Assignment \#4}
+
+\vspace*{5pt}
+
+\subsection*{Modeling Document}
+
+This homework is designed to help you prepare for completing your
+first project, which involves writing an application to solve the steady-state heat
+equation in one- and two-dimensions. To prepare for this endeavor, you will
+begin by drafting your {\em ``model document''} which highlights the
+governing equations, boundary conditions, numerical approximations,
+and high-level pseudo-code you will use to implement your
+solver. Note that this model document will then later expand as you write your
+application to include a verification methodology, input/runtime
+options, build procedures, and example results.
+
+Commit a single PDF and the associated \LaTeX files necessary to build your
+modeling document into 
+your assigned GitHub repository
+(https://github.com/uthpc/student-{\em yourgithubId}.git).  Please
+store the results in a \texttt{hw04/} subdirectory and tag your repo with a
+name of ``hw04'' after completing the assignment. This homework is due by \duedate. \\
+
+\rule{\textwidth}{0.4pt} 
+
+\exercise
+
+(100 pts) The steady-state heat equation with a constant coefficient in two dimensions is 
+given by:
+\begin{equation}
+-k\nabla^{2} T(x,y) = q(x,y)
+\end{equation}
+
+where $k$ is the thermal conductivity, $T$ is the material
+temperature, and $q$ is a heat source term.  Ultimately, we wish to
+solve this numerically via multiple finite-difference stencils and
+linear system solution techniques, and verify our results. In
+preparation for this, create a modeling document in your git repo
+using \LaTeX which describes all the pertinent details needed to
+implement your solver. The minimum items to include in your modeling
+document for this assignment include:
+
+\begin{itemize*}
+\item Governing equations, nomenclature, and boundary conditions.  You
+  can assume Dirichlet boundary conditions for this effort. 
+\item List of any assumptions you are making.
+\item Numerical Method:
+  \begin{itemize*}
+  \item provide 2nd- and 4th-order (central) finite-difference
+    approximations for the second derivative in the heat equation. Make
+    sure to include the leading order of the truncation error.
+    Provide discrete approximations of the heat equation using these
+    formulations (again including truncation error).
+\item provide representative figures of 1D and 2D discretized meshes
+  indicating domain size, mesh sizes (including variable names that will be
+  referenced in your input file later on), and finite-difference notation
+  for neighboring cells.  Be sure to indicate whether your scheme is
+  node-based or cell-based. You can assume a square domain for the 2D
+  case (but make sure to include this in your list of assumptions).
+  \item outline the linear system that you will form as part of the
+    numerical method. Indicate the number of non-zero entries on an
+    interior row of the matrix for the 1D, and 2D cases with both
+    finite-difference schemes (bonus points will be given for nice
+    figures which highlight the structure of the resulting matrices).
+   \item in pseudo-code, provide a simple iterative solution mechanism for the
+     resulting linear system using:
+     \begin{enumerate*}
+       \item Jacobi
+       \item Gauss-Seidel
+       \end{enumerate*}
+\item estimate the amount of memory required (using double-precision)
+  to implement your numerical methods
+\end{itemize*}
+\end{itemize*}
+
+
+
+\end{document}

@@ -25,7 +25,8 @@ int init_mytool()
   else
     {
       /* seed  */
-      gsl_rng_set (_gsl_rng, time(0));
+      //gsl_rng_set (_gsl_rng, time(0));
+      gsl_rng_set (_gsl_rng, 0);
 
       return 0;
     }

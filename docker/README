@@ -1,0 +1,9 @@
+This example dockerfile pulls in packages from the OpenHPC project and
+includes common ingredients needed for the class project.  It can be
+useful for implementing continuous integration (CI) with Travis.
+
+A version of this container is available publicly on DockerHub that
+you can reference directly in Travis:
+
+koomietx/class-ci:v1.1
+

@@ -1,3 +1,5 @@
-#### Fall 2019
+#### Fall 2020 (CSE 380)
 
-Shared class repository.
+Tools and Techniques for Computational Science
+
+Shared class repository.  

@@ -5,5 +5,5 @@ useful for implementing continuous integration (CI) with Travis.
 A version of this container is available publicly on DockerHub that
 you can reference directly in Travis:
 
-koomietx/class-ci:v1.1
+koomietx/class-ci:v1.3
 

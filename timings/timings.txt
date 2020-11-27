@@ -3,7 +3,7 @@
 # and Gauss-Seidel
 # -----------------------------------------------------------------------------
 # githubID		Wallclock time (secs)
-anexample		123.45
+anexample		123.456
 jbadger95
 aleccarruthers
 victor850225

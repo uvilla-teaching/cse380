@@ -5,7 +5,7 @@
 # githubID		Wallclock time (secs)
 anexample		123.456
 jbadger95
-aleccarruthers
+aleccarruthers		5540.436
 victor850225
 yc941212
 aduarteg

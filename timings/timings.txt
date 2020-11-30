@@ -15,7 +15,7 @@ jooaemi			54.09
 dcluo28
 kliment-slice
 rsphilley
-YigongQin
+YigongQin               3448.17
 masonschechter
 mashadab		2931.990
 nicolemES

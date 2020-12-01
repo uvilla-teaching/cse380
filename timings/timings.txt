@@ -7,19 +7,19 @@ anexample		123.456
 jbadger95		65.323
 aleccarruthers		5540.436
 victor850225            217.538
-yc941212
+yc941212        5.936
 aduarteg
-Shreyas911
+Shreyas911		4337.29
 symmetron
-jooaemi
 dcluo28			15.673
+jooaemi			54.09
 kliment-slice
 rsphilley
-YigongQin
-masonschechter
+YigongQin               3448.17
+masonschechter		466.876
 mashadab		2931.990
 nicolemES
-atorsey
+atorsey                 3706.03
 adityavinod
 cwangaw
 annayesy

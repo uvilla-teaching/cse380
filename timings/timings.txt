@@ -3,11 +3,11 @@
 # and Gauss-Seidel
 # -----------------------------------------------------------------------------
 # githubID		Wallclock time (secs)
-anexample		123.456
+koomie			2.14811
 jbadger95		65.323
 aleccarruthers		5540.436
 victor850225            217.538
-yc941212        5.936
+yc941212        	5.936
 aduarteg
 Shreyas911		4337.29
 symmetron
@@ -21,5 +21,5 @@ mashadab		2931.990
 nicolemES
 atorsey                 3706.03
 adityavinod
-cwangaw		  6.597
+cwangaw			6.597
 annayesy

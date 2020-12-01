@@ -14,7 +14,7 @@ symmetron
 dcluo28			15.673
 jooaemi			54.09
 kliment-slice
-rsphilley
+rsphilley               1532.53
 YigongQin               3448.17
 masonschechter		466.876
 mashadab		2931.990

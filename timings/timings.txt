@@ -16,7 +16,7 @@ dcluo28
 kliment-slice
 rsphilley
 YigongQin               3448.17
-masonschechter
+masonschechter		466.876
 mashadab		2931.990
 nicolemES
 atorsey                 3706.03

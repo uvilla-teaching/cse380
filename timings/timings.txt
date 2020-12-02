@@ -4,7 +4,7 @@
 # -----------------------------------------------------------------------------
 # githubID		Wallclock time (secs)
 koomie			2.14811
-jbadger95		65.323
+jbadger95		0.75661
 aleccarruthers		5540.436
 victor850225            217.538
 yc941212        	5.936

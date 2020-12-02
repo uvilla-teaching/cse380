@@ -3,23 +3,23 @@
 # and Gauss-Seidel
 # -----------------------------------------------------------------------------
 # githubID		Wallclock time (secs)
-anexample		123.456
-jbadger95		65.323
+koomie			2.14811
+jbadger95		0.75661
 aleccarruthers		5540.436
 victor850225            217.538
-yc941212
-aduarteg
-Shreyas911
-symmetron
-jooaemi
-dcluo28
-kliment-slice
-rsphilley
-YigongQin
-masonschechter
+yc941212        	5.936
+aduarteg                29.9542
+Shreyas911		4337.29
+symmetron		228.51
+dcluo28			15.673
+jooaemi			54.09
+kliment-slice		106.743
+rsphilley               1532.53
+YigongQin               3448.17
+masonschechter		466.876
 mashadab		2931.990
-nicolemES       3403.00
-atorsey
+nicolemES               3403.00
+atorsey                 3706.03
 adityavinod
-cwangaw
+cwangaw			6.597
 annayesy

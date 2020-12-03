@@ -18,7 +18,7 @@ rsphilley               1532.53
 YigongQin               3448.17
 masonschechter		466.876
 mashadab		2931.990
-nicolemES               3403.00
+nicolemES               1.502
 atorsey                 3706.03
 adityavinod		5874.35
 cwangaw			6.597

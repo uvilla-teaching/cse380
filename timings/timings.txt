@@ -22,4 +22,4 @@ nicolemES               1.502
 atorsey                 3706.03
 adityavinod		5874.35
 cwangaw			6.597
-annayesy
+annayesy                6.53492

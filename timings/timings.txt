@@ -1,6 +1,0 @@
-# -----------------------------------------------------------------------------
-# CSE280 2021, execution time for 2D 100x100 mesh using 4th-order differencing
-# and Gauss-Seidel
-# -----------------------------------------------------------------------------
-# githubID		Wallclock time (secs)
-

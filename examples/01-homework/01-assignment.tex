@@ -1,0 +1,194 @@
+\documentclass[letterpaper,12pt]{article}
+
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{9.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\columnsep}{0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\topskip}{0in}
+\usepackage{times}
+\usepackage{mdwlist}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{enumitem}
+\hypersetup{colorlinks=true}
+\renewcommand{\baselinestretch}{1.00}
+
+\newcounter{exanum}
+\setcounter{exanum}{1}
+\newcommand{\exercise}{\subsubsection*{Exercise \#\theexanum: \refstepcounter{exanum}}}
+
+\newcommand{\duedate}{end of day, \underline{September 21, 2021}}
+
+\input{common}
+\input{vc}
+
+\begin{document}
+\begin{flushright}
+\VCDateISO \\
+Rev: \VCRevision
+\end{flushright}
+
+\vspace*{0.1cm}
+\subsection*{Tools and Techniques for Computational Science - \courseyear{}}
+\vspace*{-.2cm}
+\noindent{{\large \em Assignment \#1}
+
+\vspace*{10pt}
+
+\subsection*{Architecture, System Access, and Starting Linux}
+
+Please answer the following questions and upload a single PDF with your responses to the
+class Canvas site.  This homework is due by \duedate.  
+
+\exercise
+
+(20 pts) Consult the \href{https://www.top500.org/system/179045}{Top500} entry
+for the \system{} system at TACC and the system user
+guide. Calculate the theoretical peak (double-precision floating point) performance 
+of the system and show exactly how this number is calculated. \\ 
+
+\vspace*{3cm} % room for answer
+
+\noindent Is your answer the same or different than what is reported
+for \texttt{Rpeak}? If different, why might this be the case?
+
+\vspace*{2cm} % room for answer
+
+\exercise
+
+(15 pts) Prove that you can access the \system{} system using ssh. Once logged
+in, your mission is to find a ``secret key'' that is located somewhere
+in karl's \texttt{WORK} directory (/work/00161/karl/stampede2). Hint:
+the file you are seeking is named \texttt{WumpuS} and it contains
+multiple records (one per student). Find the entry matching your TACC
+User ID and update the table below.
+
+\vspace*{0.5cm}
+
+\begin{table}[h]
+\begin{tabular}{c|>{\centering\arraybackslash}p{8cm}}
+\texttt{TACC User Name} & \texttt{SECRET KEY} \\ \hline
+ &  \\ 
+ &  \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\subsection*{Filters and Pipelines}
+
+A \textit{filter} is a small and (usually) specialized program in Unix-like
+operating systems that transforms data in some way.  As is typically the case
+with command line programs in Unix, filters read data from standard input and
+write to standard output.  Standard input is the data source for the program;
+by default, this is the input from the keyboard. However, programs (and thus
+filters) can receive input from a file or from the output of another
+program. This is referred to as \textit{redirection}.
+
+Standard output is the display by default. Thus, if standard output
+for a program is not redirected to a file or a device (or another
+program), it will be displayed directly to your terminal. If, however,
+you want to use output from one program as input for another program
+(a filter, for instance), you can connect the data streams with
+\textit{pipes}.
+
+\smallskip
+
+\noindent \textbf{By using filters, redirection, and pipes, it is possible to
+  construct a sequence of commands to accomplish a highly specialized
+  task.}
+
+\bigskip
+
+\noindent \textbf{Example:} How many users on \system{} have a name that contains the string ``Chris''?
+
+\begin{verbatim}
+$ getent passwd | grep Chris | wc -l
+305
+\end{verbatim}
+
+Note that we often refer to command strings like the example above as
+{\em one-liners} in that they accomplish a desired function with a
+single line of Unix commands.   \\
+
+\noindent Examples of other common filters include:
+
+\begin{multicols}{3}
+\begin{itemize}[nolistsep]
+    \item awk
+    \item cat
+    \item cut
+    \item expand
+    \item fold
+    \item grep
+    \item head
+    \item more (less)
+    \item sed 
+    \item sort
+    \item strings
+    \item tail
+    \item tac
+    \item tee
+    \item uniq
+    \item wc
+\end{itemize}
+\end{multicols}
+
+\noindent Leveraging your fine Linux skills, answer the following ({\em show the
+  commands used in your responses}):
+
+\exercise
+(30 pts) How many users on \system{} use bash? How many use tcsh? What is the most
+popular shell that isn't bash or tcsh?
+
+\vspace*{4cm}
+
+\exercise
+
+(15 pts) Who has the longest TACC username? How many characters is it? How many TACC
+users have usernames that are exactly 8 characters long?
+
+
+\vspace*{4cm}
+
+\exercise
+
+(20 pts) Many Linux distributions make a dictionary file of English words available.
+Some programs use this database of words for spell-checking purposes. Password
+checkers use it to look for passwords that can be easily cracked.  A copy of
+this file from the CentOS distribution is available in karl's \texttt{WORK}
+directory named: \texttt{linux.words} Examine this file and describe how the
+entries are arranged and formatted. Grab a copy of this file to keep in your
+own directory to complete this exercise.
+
+\medskip
+
+\noindent Construct one liners using regular expressions to answer the following questions:
+\begin{enumerate}
+\item count the number of words beginning with each letter of the alphabet and prints the result in the following format:
+\begin{verbatim}
+a:31788
+b:25192
+...
+\end{verbatim}
+
+\item How many words end with the letter ``s''? How how entries contain a possessive word (e.g. owl's-crown)?
+
+\vspace*{1.5cm}
+
+\item Write a one-liner that counts and prints out the number of words that contain the substring \textit{foo} but not the 
+substrings \textit{food, fool} or \textit{foot}. (Hint: this can be done most logically with 1, 2, or 4 calls to grep. 
+See if you can do it in 1, but full credit will be given for any answer that works.) 
+
+\vspace*{1.5cm}
+
+\item Generate your own question involving parsing the dictionary file
+and then generate the one-liner necessary to answer your question.
+\end{enumerate}
+
+\end{document}
+

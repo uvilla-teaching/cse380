@@ -1,11 +1,11 @@
-PAPER    := 04-assignment.pdf
+PAPER    := 01-assignment.pdf
 TEX_SUFS := .aux .log .nav .out .snm .toc .vrb .fdb_latexmk .bbl .blg .fls
 GITID    := $(shell git describe --always 2> /dev/null)
 
 $(info $$GITID is [${GITID}])                                                                                                              
 
 
-%.pdf:%.tex 04-assignment.tex
+%.pdf:%.tex 01-assignment.tex
 ifdef GITID
 	./vc
 else

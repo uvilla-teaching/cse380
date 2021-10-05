@@ -1,4 +1,4 @@
-PAPER    := 02-assignment.pdf
+PAPER    := assignment.pdf
 TEX_SUFS := .aux .log .nav .out .snm .toc .vrb .fdb_latexmk .bbl .blg .fls
 GITID    := $(shell git describe --always 2> /dev/null)
 FIGURES  := $(shell find *.png -type f)
@@ -7,7 +7,7 @@ $(info $$GITID is [${GITID}])
 
 
 
-%.pdf:%.tex 02-assignment.tex common.tex $(FIGURES)
+%.pdf:%.tex assignment.tex common.tex $(FIGURES)
 ifdef GITID
 	./vc
 else

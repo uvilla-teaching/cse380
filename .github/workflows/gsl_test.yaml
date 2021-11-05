@@ -1,0 +1,28 @@
+ame: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+# make sure steps are run in a login shell to support Lmod modules
+defaults:
+  run:
+    shell: bash -l {0}
+
+jobs:
+   style:
+     runs-on: ubuntu-20.04
+     container:
+       image: koomietx/class-ci:v1.3
+       options: --user 1001 --privileged
+     name: GSL test
+
+     steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - name: Query modules loaded
+          run:  module list
+        - name: Build/test
+          run: cd ./examples/buildsystems/autotools_with_tests && ml gsl && autoreconf -f -i && ./configure && make check

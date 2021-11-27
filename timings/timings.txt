@@ -1,5 +1,7 @@
 # -----------------------------------------------------------------------------
 # githubID		Wallclock time (secs)
 Ti-tanium     18.5318
-iescobar        13898.8
+iescobar      13898.8
+ChopinLi-cp   3.513
 gtpash        5.47080
+

@@ -2,3 +2,9 @@
 # githubID		Wallclock time (secs)
 Ti-tanium     18.5318
 iescobar    3739.12
+CanisYue      3721.32
+ChopinLi-cp   3.513
+gtpash        5.47080
+EboniWilliams 5.25004
+chahak13      4937.43
+

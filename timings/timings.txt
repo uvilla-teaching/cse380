@@ -1,5 +1,6 @@
 # -----------------------------------------------------------------------------
 # githubID		Wallclock time (secs)
+koomie         2.14982
 Ti-tanium      18.5318
 iescobar       3739.12
 CanisYue       3721.32

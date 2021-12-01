@@ -15,3 +15,4 @@ goldberg       3.1877
 asadh          DNF
 cdennard       DNR
 emily-nguyen97 327.60
+nina-af        47.9804

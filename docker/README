@@ -5,5 +5,5 @@ useful for implementing continuous integration (CI) with Travis.
 A version of this container is available publicly on DockerHub that
 you can reference directly in GitHub Actions:
 
-uvilla/class-ci:v1.0
+uvilla/class-ci:latest
 

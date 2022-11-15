@@ -6,7 +6,7 @@ module load valgrind
 ```
 ### Compile and link
 ```
-g++ -g -I$TACC_BOOST_DIR/include -D-DBOOST_ALL_DYN_LINK -o main.o -c main.cpp
+g++ -g -I$TACC_BOOST_DIR/include -DBOOST_ALL_DYN_LINK -o main.o -c main.cpp
 g++ -o main main.o -L$TACC_BOOST_DIR/lib -lpthread -lboost_log -lboost_system -lboost_thread -lboost_filesystem
 ```
 ### Run with valgrind

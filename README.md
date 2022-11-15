@@ -1,4 +1,4 @@
-[![CI](https://github.com/uthpc/cse380/actions/workflows/gsl_test.yaml/badge.svg)](https://github.com/uthpc/cse380/actions/workflows/gsl_test.yaml)
+[![CI](https://github.com/uvilla-teaching/cse380/actions/workflows/gsl_test.yaml/badge.svg)](https://github.com/uvilla-teaching/cse380/actions/workflows/gsl_test.yaml)
 
 #### Fall 2022 (CSE 380)
 

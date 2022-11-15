@@ -1,5 +1,5 @@
 FROM centos:7
-MAINTAINER Karl W. Schulz <karl@oden.utexas.edu>
+MAINTAINER Umberto Villa <uvilla@oden.utexas.edu>
 
 # Define a user
 RUN useradd -u 2000 -m test
@@ -9,25 +9,21 @@ RUN yum install -y https://github.com/openhpc/ohpc/releases/download/v1.3.GA/ohp
 
 # Add some packages
 RUN yum -y install make which git
-RUN yum -y install ohpc-autotools
+RUN yum -y install ohpc-autotools cmake-ohpc
 RUN yum -y install valgrind-ohpc
 RUN yum -y install gnu8-compilers-ohpc
 RUN yum -y install gsl-gnu8-ohpc hdf5-gnu8-ohpc
 RUN yum -y install openmpi3-gnu8-ohpc boost-gnu8-openmpi3-ohpc petsc-gnu8-openmpi3-ohpc
 RUN yum -y install lmod-defaults-gnu8-openmpi3-ohpc
-RUN yum -y install bc wget zlib-devel perl-Digest-MD5
+RUN yum -y install bc wget zlib-devel perl-core perl-Digest-MD5 perl-IO-Compress
 # Add Bats
 RUN yum -y install bats
-# Add MASA
-ENV masa_ver=0.50.0
-RUN wget https://github.com/manufactured-solutions/MASA/releases/download/$masa_ver/masa-$masa_ver.tar.gz -P /tmp
-RUN cd /tmp; tar xfz /tmp/masa-$masa_ver.tar.gz
-RUN . /etc/profile.d/lmod.sh \
-    && cd /tmp/masa-$masa_ver \
-    && ./configure --enable-fortran-interfaces \
-    && make \
-    && make install
-RUN rm /tmp/masa-$masa_ver.tar.gz
+# Add lcov
+ENV lcov_ver="1.16"
+RUN wget https://github.com/linux-test-project/lcov/releases/download/v1.16/lcov-$lcov_ver.tar.gz -P /tmp
+RUN cd /tmp; tar xfz /tmp/lcov-$lcov_ver.tar.gz
+RUN cd /tmp/lcov-$lcov_ver && make install
+RUN rm /tmp/lcov-$lcov_ver.tar.gz
 # Add GRVY
 ENV grvy_ver="0.34.0"
 RUN wget https://github.com/hpcsi/grvy/releases/download/$grvy_ver/grvy-$grvy_ver.tar.gz -P /tmp
@@ -43,6 +39,8 @@ RUN rm /tmp/grvy-$grvy_ver.tar.gz
 # Register new libs installed into /usr/local/lib with linker
 RUN echo "/usr/local/lib" > /etc/ld.so.conf.d/class.conf
 RUN ldconfig
+
+RUN mkdir /home/test/shared
 
 # User to run as
 WORKDIR /home/test

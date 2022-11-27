@@ -3,3 +3,4 @@
 koomie         2.14982
 mrbaghirzade   3.64352
 bechrist       158.50903
+jsukpark       1.61275

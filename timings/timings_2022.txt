@@ -2,5 +2,5 @@
 # githubID		Wallclock time (secs)
 koomie         2.14982
 mrbaghirzade   3.64352
-bechrist       158.50903
+bechrist       9.30736
 jsukpark       1.61275

@@ -8,3 +8,4 @@ kunuki         2.25
 VigneshSella   1.164
 s769           6.770581 (serial/GS) 0.31 (parallel/GMRES)
 kp32595        4.18327
+jgkirchhoff    n/a

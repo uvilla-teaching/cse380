@@ -8,4 +8,5 @@ jpham7         3.24084
 kunuki         2.25
 VigneshSella   1.164
 s769           6.770581 (serial/GS) 0.31 (parallel/GMRES)
+V-Rang         221.87000000
 kp32595        4.18327

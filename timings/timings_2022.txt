@@ -10,5 +10,6 @@ VigneshSella   1.164
 s769           6.770581 (serial/GS) 0.31 (parallel/GMRES)
 V-Rang         221.87000000
 kp32595        4.18327
+jdz357         16847
 kaifaluo       20.821
 szanykmclean   1.406

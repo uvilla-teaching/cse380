@@ -6,4 +6,4 @@ bechrist       9.30736
 jsukpark       1.61275
 kunuki         2.25
 VigneshSella   1.164
-bgzastrow      DNF
+bgzastrow      3.11965

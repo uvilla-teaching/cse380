@@ -13,7 +13,7 @@ ifdef GITID
 else
 	test -s vc.tex || { echo "vc.tex file does not exist (and this is not a git repo)!"; exit 1; }
 endif
-	latexmk -pdf $<
+	pdflatex $<
 
 all: $(PAPER)
 

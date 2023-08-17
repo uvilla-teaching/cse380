@@ -7,12 +7,19 @@ jsukpark       1.61275
 jpham7         3.24084
 kunuki         2.25
 VigneshSella   1.164
+bgzastrow      3.11965
 s769           6.770581 (serial/GS) 0.31 (parallel/GMRES)
 V-Rang         221.87000000
 kp32595        4.18327
+jgkirchhoff    n/a
 shoshanareich  67.6530
 jdz357         16847
 kaifaluo       20.821
 szanykmclean   1.406
+deekshith98    40.38
 dilipsgk	14.23
 sehenaoga      7165
+kentonwho	3.88
+karanh97	22.43
+tphanmt		2.13421
+

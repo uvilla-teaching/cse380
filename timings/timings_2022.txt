@@ -4,6 +4,16 @@ koomie         2.14982
 mrbaghirzade   3.64352
 bechrist       9.30736
 jsukpark       1.61275
+jpham7         3.24084
 kunuki         2.25
 VigneshSella   1.164
 bgzastrow      3.11965
+s769           6.770581 (serial/GS) 0.31 (parallel/GMRES)
+V-Rang         221.87000000
+kp32595        4.18327
+shoshanareich  67.6530
+jdz357         16847
+kaifaluo       20.821
+szanykmclean   1.406
+dilipsgk	14.23
+tphanmt		2.13421

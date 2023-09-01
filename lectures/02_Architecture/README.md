@@ -1,3 +1,7 @@
+# CPU info
+
+1. Type `lscpu` command
+
 # Interconnet
 
 In this class we will use the OSU Micro-Benchmarks to measure bandwidth (https://mvapich.cse.ohio-state.edu/benchmarks/) and latency of lonestar6 interconnect.

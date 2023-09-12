@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#SBATCH -N 2
+#SBATCH -n 128
+#SBATCH -o launcher.%j.out
+#SBATCH -J launcher
+#SBATCH -p normal
+#SBATCH -A CDA23007
+#SBATCH -t 00:01:00
+
+# setup launcher environment
+module purge
+module load TACC
+module load launcher
+
+export LAUNCHER_PLUGIN_DIR=$LAUNCHER_DIR/plugins
+export LAUNCHER_RMI=SLURM
+
+# file with commands to be run in parallel
+export LAUNCHER_JOB_FILE=./jobfile
+
+# job launch
+$LAUNCHER_DIR/paramrun
+

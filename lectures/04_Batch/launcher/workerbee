@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $# -lt 1 ];then
+    echo "Usage: workerbee <id>"
+    exit 1
+fi
+
+echo "Doing really important work using argument: $1"

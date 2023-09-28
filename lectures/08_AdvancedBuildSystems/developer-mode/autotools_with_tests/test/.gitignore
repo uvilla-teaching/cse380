@@ -1,0 +1,9 @@
+.tmp.output
+.tmp_output
+Makefile.in
+Makefile
+*.log
+*.trs
+test-suite.log
+
+

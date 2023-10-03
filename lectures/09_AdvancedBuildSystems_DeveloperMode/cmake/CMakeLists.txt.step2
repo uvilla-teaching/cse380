@@ -9,7 +9,7 @@ include(FindGSL)
 include_directories(${GSL_INCLUDE_DIR})
 
 # add the executable
-add_executable(random main.c mytools.c mytools.h)
+add_executable(random src/main.c src/mytools.c src/mytools.h)
 
 # enable GSl library linkage
 target_link_libraries(random GSL::gsl GSL::gslcblas)

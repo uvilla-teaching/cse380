@@ -25,6 +25,6 @@ jobs:
         - name: Query modules loaded
           run:  module list
         - name: Configure
-          run: cd ./lectures/09_AdvancedBuildSystems_DeveloperMode/autotools_with_tests && ml gsl && autoreconf -f -i && ./configure
+          run: cd ./lectures/09_AdvancedBuildSystems_DeveloperMode/additional-examples/autotools_with_tests && ml gsl && autoreconf -f -i && ./configure
         - name: Build and test  
-          run: cd ./lectures/09_AdvancedBuildSystems_DeveloperMode/autotools_with_tests && make check
+          run: cd ./lectures/09_AdvancedBuildSystems_DeveloperMode/additional-examples/autotools_with_tests && make check

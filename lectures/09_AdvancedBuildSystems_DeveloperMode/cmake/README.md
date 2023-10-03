@@ -1,15 +1,30 @@
 # Basic compile
+
+```
 cmake -DGSL_ROOT_DIR=$GSL_DIR ..
 make
+```
 
-# But what compiler was used and compilation flags?
+Note that cmake loves rpath
+
+```
 make VERBOSE=1
+```
 
-# Compile in debug mode
+# Other compiler options 
+
+Compile in debug mode
+```
 cmake -DGSL_ROOT_DIR=$GSL_DIR -DCMAKE_BUILD_TYPE=Debug ..
+```
 
-# or in optimized mode
+Or in optimized mode
+```
 cmake -DGSL_ROOT_DIR=$GSL_DIR -DCMAKE_BUILD_TYPE=Release ..
+```
 
-# or  change the compiler
+Or  change the compiler
+
+```
 cmake -DGSL_ROOT_DIR=$GSL_DIR -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=icc ..
+```

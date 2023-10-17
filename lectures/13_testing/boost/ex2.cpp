@@ -1,0 +1,15 @@
+#define BOOST_TEST_DYN_LINK
+#define BOOST_TEST_MODULE My tests
+#include <boost/test/unit_test.hpp>
+
+BOOST_AUTO_TEST_SUITE(mysuite)
+
+BOOST_AUTO_TEST_CASE(test1) {
+  BOOST_CHECK_EQUAL(2+2, 4);
+}
+
+BOOST_AUTO_TEST_CASE(test2) {
+    BOOST_CHECK_EQUAL(6*7, 42);
+}
+
+BOOST_AUTO_TEST_SUITE_END()

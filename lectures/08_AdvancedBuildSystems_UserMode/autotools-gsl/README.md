@@ -5,7 +5,7 @@
 ```
 export VERSION=2.7.1
 wget http://gnu.mirror.iweb.com/gsl/gsl-$VERSION.tar.gz
-tar -xf gsl-$VERSION.tar.gz
+tar -xzf gsl-$VERSION.tar.gz
 cd gsl-$VERSION
 ```
 ## Let's get access to a compute node

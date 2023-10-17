@@ -1,5 +1,5 @@
 AUTOMAKE_OPTIONS = foreign
-SUBDIRS = src test
+SUBDIRS = src 
 
 # Let autotools know that we have some local macros in the m4/
 # directory

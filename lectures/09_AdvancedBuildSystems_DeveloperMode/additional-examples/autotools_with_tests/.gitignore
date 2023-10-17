@@ -13,3 +13,4 @@ test-driver
 config.log
 config.status
 Makefile
+build

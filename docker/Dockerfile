@@ -9,7 +9,7 @@ RUN useradd -u 2000 -m test
 RUN yum install -y  http://repos.openhpc.community/OpenHPC/2/CentOS_8/x86_64/ohpc-release-2-1.el8.x86_64.rpm
 RUN yum install -y yum-utils 
 # Add some packages
-RUN yum -y install make which git
+RUN yum -y install make which git diffutils
 RUN yum -y install ohpc-autotools cmake-ohpc
 RUN yum -y --enablerepo powertools install lmod-ohpc
 RUN yum -y install valgrind-ohpc

@@ -14,6 +14,8 @@ defaults:
 jobs:
    style:
      runs-on: ubuntu-20.04
+     env:
+       WORKDIR: ./lectures/13_testing/autotools_with_tests
      container:
        image: uvilla/class-ci:latest
        options: --user 1001 --privileged
@@ -25,8 +27,8 @@ jobs:
         - name: Query modules loaded
           run:  module list
         - name: Configure
-          run: cd ./lectures/09_AdvancedBuildSystems_DeveloperMode/additional-examples/autotools_with_tests && ml gsl && autoreconf -f -i && ./configure
+          run: cd $WORKDIR && ml gsl && autoreconf -f -i && ./configure
         - name: Build and test  
-          run: cd ./lectures/09_AdvancedBuildSystems_DeveloperMode/additional-examples/autotools_with_tests && ml gsl && make check
+          run: cd $WORKDIR && ml gsl && make check
         - name: Output
-          run: cat ./lectures/09_AdvancedBuildSystems_DeveloperMode/additional-examples/autotools_with_tests/test/test-suite.log
+          run: cat $WORKDIR/test/test-suite.log

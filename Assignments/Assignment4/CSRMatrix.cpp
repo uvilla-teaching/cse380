@@ -106,6 +106,8 @@ void CSRMatrix::_create_row_index(int nnz, const int *irow)
         row_index_[ irow[c] + 1] += 1;
     }
 
+     
+
     //Perform partial sums of the non-zeros for each row
     int nnz2(0);
     for(int c(0); c < nrows_+1; ++c)

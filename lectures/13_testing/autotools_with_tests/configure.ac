@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.68])
-AC_INIT([cse380], [0.1], [karl@ices.utexas.edu])
+AC_INIT([cse380], [0.1], [uvilla@oden.utexas.edu])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR([src/main.c])
 AM_INIT_AUTOMAKE

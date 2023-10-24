@@ -1,26 +1,28 @@
-FROM centos:7
+# Pull the latest image of RockyLinux from the Docker repo
+FROM rockylinux:8
 MAINTAINER Umberto Villa <uvilla@oden.utexas.edu>
 
 # Define a user
 RUN useradd -u 2000 -m test
 
 # enable OpenHPC repository 
-RUN yum install -y https://github.com/openhpc/ohpc/releases/download/v1.3.GA/ohpc-release-1.3-1.el7.x86_64.rpm
-
+RUN yum install -y  http://repos.openhpc.community/OpenHPC/2/CentOS_8/x86_64/ohpc-release-2-1.el8.x86_64.rpm
+RUN yum install -y yum-utils 
 # Add some packages
-RUN yum -y install make which git
+RUN yum -y install make which git diffutils
 RUN yum -y install ohpc-autotools cmake-ohpc
+RUN yum -y --enablerepo powertools install lmod-ohpc
 RUN yum -y install valgrind-ohpc
-RUN yum -y install gnu8-compilers-ohpc
-RUN yum -y install gsl-gnu8-ohpc hdf5-gnu8-ohpc
-RUN yum -y install openmpi3-gnu8-ohpc boost-gnu8-openmpi3-ohpc petsc-gnu8-openmpi3-ohpc
-RUN yum -y install lmod-defaults-gnu8-openmpi3-ohpc
+RUN yum -y install gnu9-compilers-ohpc
+RUN yum -y install gsl-gnu9-ohpc hdf5-gnu9-ohpc
+RUN yum -y install mpich-ofi-gnu9-ohpc boost-gnu9-mpich-ohpc petsc-gnu9-mpich-ohpc
+RUN yum -y install lmod-defaults-gnu9-mpich-ofi-ohpc
 RUN yum -y install bc wget zlib-devel perl-core perl-Digest-MD5 perl-IO-Compress
 # Add Bats
 RUN yum -y install bats
 # Add lcov
-ENV lcov_ver="1.16"
-RUN wget https://github.com/linux-test-project/lcov/releases/download/v1.16/lcov-$lcov_ver.tar.gz -P /tmp
+ENV lcov_ver="2.0"
+RUN wget https://github.com/linux-test-project/lcov/releases/download/v$lcov_ver/lcov-$lcov_ver.tar.gz -P /tmp
 RUN cd /tmp; tar xfz /tmp/lcov-$lcov_ver.tar.gz
 RUN cd /tmp/lcov-$lcov_ver && make install
 RUN rm /tmp/lcov-$lcov_ver.tar.gz

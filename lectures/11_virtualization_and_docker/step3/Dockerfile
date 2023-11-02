@@ -16,7 +16,7 @@ RUN yum -y install make which git
 RUN yum -y install ohpc-autotools
 RUN yum -y --enablerepo powertools install lmod-ohpc
 RUN yum -y install valgrind-ohpc
-RUN yum -y install lmod-defaults-gnu9-mpich-ofi-ohpc
+RUN yum -y install lmod-defaults-gnu9-mvapich2-ohpc
 RUN yum -y install gsl-gnu9-ohpc
 RUN yum -y install examples-ohpc
 

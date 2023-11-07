@@ -15,8 +15,8 @@ RUN yum -y --enablerepo powertools install lmod-ohpc
 RUN yum -y install valgrind-ohpc
 RUN yum -y install gnu9-compilers-ohpc
 RUN yum -y install gsl-gnu9-ohpc hdf5-gnu9-ohpc
-RUN yum -y install mpich-ofi-gnu9-ohpc boost-gnu9-mpich-ohpc petsc-gnu9-mpich-ohpc
-RUN yum -y install lmod-defaults-gnu9-mpich-ofi-ohpc
+RUN yum -y install mvapich2-gnu9-ohpc boost-gnu9-mvapich2-ohpc petsc-gnu9-mvapich2-ohpc
+RUN yum -y install lmod-defaults-gnu9-mvapich2-ohpc
 RUN yum -y install bc wget zlib-devel perl-core perl-Digest-MD5 perl-IO-Compress
 # Add Bats
 RUN yum -y install bats

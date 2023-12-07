@@ -3,6 +3,7 @@
 koomie            2.14982
 Team-3            1.054
 koomie         2.14982
+team1		0.699
 shahjen        10.317
 team4		2.695
 pvenkat        1.467

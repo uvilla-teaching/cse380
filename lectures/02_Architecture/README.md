@@ -4,12 +4,12 @@
 
 # Interconnet
 
-In this class we will use the OSU Micro-Benchmarks to measure bandwidth (https://mvapich.cse.ohio-state.edu/benchmarks/) and latency of lonestar6 interconnect.
+In this class, we will use the OSU Micro-Benchmarks to measure bandwidth (https://mvapich.cse.ohio-state.edu/benchmarks/) and latency of lonestar6 interconnect.
 Many of today's steps (configuring and compiling the library, requesting an interactive session on a compute note) will explained later in the class.
 
 ## Obtain and build OSU Micro-Benchmarks
 
-1. After connecting to lonestar6, we will use the linux command `wget` and `tar` to download and unpack the benchmarks suite
+1. After connecting to lonestar6, we will use the Linux command `wget` and `tar` to download and unpack the benchmarks suite
 
 ```
 wget https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-7.2.tar.gz
@@ -30,7 +30,7 @@ Note: You can also find the precompiled benchmarks in
 /work/03453/villa13/ls6/CSE380/PUBLIC/osu-micro-benchmarks/mpi
 ```
 
-## Run a latency and bandwith test
+## Run a latency and bandwidth test
 
 3. Request an interactive session with 2 compute nodes. Use the class account `CDA23007`
 
@@ -39,7 +39,7 @@ idev -N 2 -A CDA23007
 ```
 
 4. Run the `osu_latency` test:
-> The latency tests are carried out in a ping-pong fashion. The sender sends a message with a certain data size to the receiver and waits for a reply from the receiver. The receiver receives the message from the sender and sends back a reply with the same data size. Many iterations of this ping-pong test are carried out and average one-way latency numbers are obtained. Blocking version of MPI functions (MPI_Send and MPI_Recv) are used in the tests. 
+> The latency tests are carried out in a ping-pong fashion. The sender sends a message with a certain data size to the receiver and waits for a reply from the receiver. The receiver receives the message from the sender and sends back a reply with the same data size. Many iterations of this ping-pong test are carried out and average one-way latency numbers are obtained. Blocking versions of MPI functions (MPI_Send and MPI_Recv) are used in the tests. 
 
 Here we use the command `ibrun -n 2` to launch the test using two processes (sitting on two different nodes)
 

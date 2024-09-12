@@ -1,0 +1,28 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Quo usque tandem abutere, Catilina, patientia nostra?
+Quam diu etiam furor iste tuus nos eludet?
+Quem ad finem sese effrenata iactabit audacia? Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae, nihil timor populi, nihil concursus bonorum omnium, nihil hic munitissimus habendi senatus locus, nihil horum ora voltusque moverunt?
+Patere tua consilia non sentis, constrictam iam horum omnium scientia teneri coniurationem tuam non vides?
+Quid proxima, quid superiore nocte egeris, ubi fueris, quos convocaveris, quid consilii ceperis, quem nostrum ignorare arbitraris?
+O tempora, o mores! Senatus haec intellegit. Consul videt; hic tamen vivit. Vivit?
+Immo vero etiam in senatum venit, fit publici consilii particeps, notat et designat oculis ad caedem unum quemque nostrum. Nos autem fortes viri satis facere rei publicae videmur, si istius furorem ac tela vitemus.
+Ad mortem te, Catilina, duci iussu consulis iam pridem oportebat, in te conferri pestem, quam tu in nos [omnes iam diu] machinaris.
+
+# Useful vi commands
+:w <filename> save buffer with a specific file name
+:q! – exit without saving the document. Very handy for beginners 
+:wq – save and exit
+/ <string> – search within the document for text. n goes to next result
+dd – delete the current line
+yy – copy the current line
+p – paste the last cut/deleted line
+:1 – goto first line in the file
+:$ - goto last line in the file
+$ – end of current line, ^ – beginning of line
+% – show matching brace, bracket, parentheses
+u – undo last change
+

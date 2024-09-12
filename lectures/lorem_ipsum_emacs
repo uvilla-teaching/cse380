@@ -1,0 +1,29 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Quo usque tandem abutere, Catilina, patientia nostra?
+Quam diu etiam furor iste tuus nos eludet?
+Quem ad finem sese effrenata iactabit audacia? Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae, nihil timor populi, nihil concursus bonorum omnium, nihil hic munitissimus habendi senatus locus, nihil horum ora voltusque moverunt?
+Patere tua consilia non sentis, constrictam iam horum omnium scientia teneri coniurationem tuam non vides?
+Quid proxima, quid superiore nocte egeris, ubi fueris, quos convocaveris, quid consilii ceperis, quem nostrum ignorare arbitraris?
+O tempora, o mores! Senatus haec intellegit. Consul videt; hic tamen vivit. Vivit?
+Immo vero etiam in senatum venit, fit publici consilii particeps, notat et designat oculis ad caedem unum quemque nostrum. Nos autem fortes viri satis facere rei publicae videmur, si istius furorem ac tela vitemus.
+Ad mortem te, Catilina, duci iussu consulis iam pridem oportebat, in te conferri pestem, quam tu in nos [omnes iam diu] machinaris.
+
+# Useful emacs commands
+C-x C-s (control + x, control + s) – saves the file
+C-g 		exits the current command
+C-x u 	 	Undo
+C-x C-c 		exit after saving
+Esc > 		go to end of file
+Esc < 		go to beginning of file
+C-k 		kill current line
+C-space 		set mark
+C-w	 	kill region (use in combination with set mark)
+C-s	 	forward search
+C-r	 	search backward
+C-x rt		string rectangle
+Esc %		query and replace
+

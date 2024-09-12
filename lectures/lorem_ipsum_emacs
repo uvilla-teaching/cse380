@@ -24,6 +24,12 @@ C-space 		set mark
 C-w	 	kill region (use in combination with set mark)
 C-s	 	forward search
 C-r	 	search backward
-C-x rt		string rectangle
 Esc %		query and replace
 
+Windows:
+C-x 3 Create another window to the right
+C-x o Go to the other window
+C-x 0 Close the current window
+
+View files in directory
+C-x d

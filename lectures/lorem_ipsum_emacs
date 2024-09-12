@@ -15,7 +15,7 @@ Ad mortem te, Catilina, duci iussu consulis iam pridem oportebat, in te conferri
 # Useful emacs commands
 C-x C-s (control + x, control + s) – saves the file
 C-g 		exits the current command
-C-x u 	 	Undo
+C-x - 	 	Undo
 C-x C-c 		exit after saving
 Esc > 		go to end of file
 Esc < 		go to beginning of file

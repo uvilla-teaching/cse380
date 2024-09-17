@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH -N 2
+#SBATCH -n 32
+#SBATCH -o myjob.%j.out
+#SBATCH -e error.%j.out
+#SBATCH -J myjob
+#SBATCH -p normal
+#SBATCH -A CDA23007
+#SBATCH -t 00:01:00
+
+#SBATCH --mail-user=uvilla@oden.utexas.edu
+#SBATCH --mail-type=begin
+
+# Just print today's date and time
+date
+
+# Usually not needed, but just for demonstration only, print some of the slurm Env variables
+echo The job named $SLURM_JOB_NAME with slurm id $SLURM_JOB_ID is using $SLURM_NTASKS tasks.
+echo It was submitted from $SLURM_SUBMIT_DIR
+
+# Check which modules are currently loaded, set modules as needed
+module list
+
+# Echo the current directory
+pwd
+
+# Run your program
+ibrun ./hello
+
+# Print again today's date and time
+date

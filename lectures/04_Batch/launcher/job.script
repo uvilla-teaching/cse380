@@ -6,7 +6,7 @@
 #SBATCH -J launcher
 #SBATCH -p normal
 #SBATCH -A CDA23007
-#SBATCH -t 00:01:00
+#SBATCH -t 00:05:00
 
 # setup launcher environment
 module purge
@@ -22,3 +22,6 @@ export LAUNCHER_JOB_FILE=./jobfile
 # job launch
 $LAUNCHER_DIR/paramrun
 
+#Collect all output
+cat output_workbee_*
+rm output_workbee_*

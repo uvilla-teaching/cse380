@@ -5,4 +5,6 @@ if [ $# -lt 1 ];then
     exit 1
 fi
 
-echo "Doing really important work using argument: $1"
+echo "$(hostname): Starting really important work using argument: $1"
+time sleep $(echo "scale=2;sqrt($1)" | bc)
+echo "$(hostname): Completing really important work using argument: $1"

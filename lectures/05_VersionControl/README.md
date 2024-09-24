@@ -49,14 +49,22 @@ git diff CHANGELOG
 git commit -m "Update change log"
 ```
 
-## Clone an existing repo
+## Clone a local repo
 
-Read-only public repository: use https
+```
+git clone myrepo myrepo2
+```
+
+Commit some changes in `myrepo` and use `git pull` to fetch those changes in `myrepo2`. 
+
+## Clone an existing repo from Github
+
+Read-only public repository: use `https`
 ```
 git clone https://github.com/uvilla-teaching/cse380.git
 ```
 
-Passwordless Read/write access (both public and private repositories): use ssh
+Passwordless Read/write access (both public and private repositories): use `ssh`
 ```
 git clone git@github.com:uvilla-teaching/cse380.git
 ```
@@ -79,11 +87,12 @@ ssh -T git@github.com
 
 ## Sending changes back to GitHub
 
-Step 1: Create an empty repo on GitHub called test
+Step 1: Create an empty repo on GitHub called `myrepo`
+
 Step 2: Set the remote repo
 ```
 git remote -v
-git remote add origin git@github.com:uvilla-teaching/test.git
+git remote add origin git@github.com:uvilla-teaching/myrepo.git
 git push --set-upstream origin main
 ```
 
@@ -117,7 +126,25 @@ git push
 
 ## Extra
 
-- Creating and resolving a conflict
-- Gitignore
-- tags
-- Pull requests
+### Creating and resolving a conflict
+
+1. Create a new branch `dev`, modify `CHANGELOG`, and commit
+2. Go back to `main`, also modify `CHANGELOG`, and commit
+3. Type `git merge dev`, show and resolve the conflict
+
+### Ignore some files
+Create a `.gitignore` file to tell git to avoid tracking some files. Point out that GitHub has several default `.gitignore` for the programming language you are using.
+
+ ### Create a tag
+To tag a specific version of the repo
+```
+git tag -a v0.1 -m "my first version"
+```
+Note: by default git push will not push tags. You need:
+```
+git push origin --tags
+```
+
+ ### Pull requests
+
+ Show in GitHub :)

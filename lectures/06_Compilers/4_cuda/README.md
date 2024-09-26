@@ -21,3 +21,7 @@ Now we need a compute node with GPU support
 idev -A CDA23007 -t 0:10:0 -p gpu-a100-small -n 1 -N 1
 ./hello_cuda
 ```
+or use SLURM srun or sbatch
+```
+srun -A CDA23008 -t 0:10:0 -p gpu-a100-small -n 1 -N 1 ./hello_cuda
+```

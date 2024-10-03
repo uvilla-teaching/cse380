@@ -3,15 +3,15 @@
 ## Download and untar the GSL library
 
 ```
-export VERSION=2.7.1
-wget http://gnu.mirror.iweb.com/gsl/gsl-$VERSION.tar.gz
+export VERSION=2.8
+wget https://mirror.ibcp.fr/pub/gnu/gsl/gsl-$VERSION.tar.gz  
 tar -xzf gsl-$VERSION.tar.gz
 cd gsl-$VERSION
 ```
 ## Let's get access to a compute node
 
 ```
-idev -t 30:00 
+idev -A CDA23007 -t 30:00 -p vm_small
 ```
 
 ## configure
@@ -51,10 +51,10 @@ Why it fails and how to fix it?
 
 ```
 ../configure --help
-../configure --prefix=$HOME/bin/gsl-2.7.1
+../configure --prefix=$HOME/bin/gsl-$VERSION
 make
 make install
-ls $HOME/bin/gsl-2.7.1
+ls $HOME/bin/gsl-$VERSION
 ```
 
 What compiler was used?
@@ -66,7 +66,7 @@ grep "\bCFLAGS\b" config.log
 
 ## Changing flags/Compiler options:
 ```
-./configure --prefix=$HOME/bin/gsl-2.7.1-intel CC=icc CFLAGS="-g -O0"
+./configure --prefix=$HOME/bin/gsl-$VERSION-intel CC=icc CFLAGS="-g -O0"
 ```
 
 You could also do `export CC=icc`, but better don't. Why?
@@ -81,7 +81,7 @@ Often it is a good idea to keep the source code and your build in separate direc
 ```
 make distclean
 mkdir build-intel && cd build-intel
-../configure --prefix=$HOME/bin/gsl-2.7.1-intel CC=icc CFLAGS="-g -O0"
+../configure --prefix=$HOME/bin/gsl-$VERSION-intel CC=icc CFLAGS="-g -O0"
 ```
 
 ## Make checks

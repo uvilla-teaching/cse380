@@ -23,11 +23,11 @@ more config.h
 more Makefile
 ```
 
-Note: system related variables (e.g. presence of <sys/stat.h>, package specific variables (e.g. PACKAGE_VERSION)
+Note: system-related variables (e.g. presence of <sys/stat.h>, package-specific variables (e.g. PACKAGE_VERSION)
 
 ## Building
 
-Let's build using a single core
+Let's build using a single-core
 
 ```
 /bin/time -f '%e' make >& make.log
@@ -66,7 +66,7 @@ grep "\bCFLAGS\b" config.log
 
 ## Changing flags/Compiler options:
 ```
-./configure --prefix=$HOME/bin/gsl-2.7.1-intel CC=icc CFLAGS="-g -O0"
+./configure --prefix=$HOME/bin/gsl-2.7.1-intel CC=icc CFLAGS="-g -O0"
 ```
 
 You could also do `export CC=icc`, but better don't. Why?
@@ -76,12 +76,12 @@ head -n 20 configure.log
 ```
 
 ## VPATHS
-Often it is a good idea to keep the source code and your build separated. How? Use VPATHS
+Often it is a good idea to keep the source code and your build in separate directories. How? Use `VPATHS`
 
 ```
 make distclean
 mkdir build-intel && cd build-intel
-../configure --prefix=$HOME/bin/gsl-2.7.1-intel CC=icc CFLAGS="-g -O0"
+../configure --prefix=$HOME/bin/gsl-2.7.1-intel CC=icc CFLAGS="-g -O0"
 ```
 
 ## Make checks

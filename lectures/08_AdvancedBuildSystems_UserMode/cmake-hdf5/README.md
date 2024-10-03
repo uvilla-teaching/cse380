@@ -42,7 +42,7 @@ make install
 ls $HOME/sw/hdf5
 ```
 
-# How can I see this options?
+# How can I see these options?
 
 Use `cmake -L`
 
@@ -50,13 +50,16 @@ Use `cmake -L`
 cmake -L 2>&1 | grep INSTALL
 ```
 
-Note, to start from scratch simple delete `CMakeCache.txt`
+Note, to start from scratch simply delete `CMakeCache.txt`
 
 ```
 rm CMakeCache.txt 
 cmake ..
 cmake -LA 2>&1 | grep INSTALL
 ```
+
+## Interactive
+Use `ccmake`
 
 Option `A` toggles advanced mode
 

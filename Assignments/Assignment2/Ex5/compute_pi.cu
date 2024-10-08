@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
         numSamples=atoi(argv[1]);
         assert(numSamples > 0);
          
-	ITERATIONS = numSamples/(WARP_SIZE*NBLOCKS) + 1;
+	ITERATIONS = (numSamples-1)/(WARP_SIZE*NBLOCKS) + 1;
 
 	int numDev;
 	cudaGetDeviceCount(&numDev);

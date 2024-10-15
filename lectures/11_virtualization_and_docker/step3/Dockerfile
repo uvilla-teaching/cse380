@@ -21,7 +21,7 @@ RUN yum -y install gsl-gnu9-ohpc
 RUN yum -y install examples-ohpc
 
 RUN . /etc/profile.d/lmod.sh \
-      module load gsl
+      module load gsl \
       echo $GSL_LIB_DIR > /etc/ld.so.conf.d/ohpc.conf
 RUN ldconfig
 

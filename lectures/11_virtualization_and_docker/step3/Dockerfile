@@ -20,6 +20,11 @@ RUN yum -y install lmod-defaults-gnu9-mvapich2-ohpc
 RUN yum -y install gsl-gnu9-ohpc
 RUN yum -y install examples-ohpc
 
+RUN . /etc/profile.d/lmod.sh \
+      module load gsl
+      echo $GSL_LIB > /etc/ld.so.conf.d/ohpc.conf
+RUN ldconfig
+
 # User to run as
 RUN mkdir /home1
 WORKDIR /home/uvilla

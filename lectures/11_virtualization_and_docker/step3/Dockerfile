@@ -22,7 +22,7 @@ RUN yum -y install examples-ohpc
 
 RUN . /etc/profile.d/lmod.sh \
       module load gsl
-      echo $GSL_LIB > /etc/ld.so.conf.d/ohpc.conf
+      echo $GSL_LIB_DIR > /etc/ld.so.conf.d/ohpc.conf
 RUN ldconfig
 
 # User to run as

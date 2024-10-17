@@ -23,7 +23,7 @@ ls /
 
 Now run in parallel
 ```
-ibrun -n 16 apptainer run tacc.sif /hello_mpi
+MV2_SMP_USE_CMA=0 ibrun -n 16 apptainer run tacc.sif /hello_mpi
 ```
 
 

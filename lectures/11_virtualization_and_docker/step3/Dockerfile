@@ -28,6 +28,7 @@ RUN . /etc/profile.d/lmod.sh \
 RUN . /etc/profile.d/lmod.sh \
       module load gsl \
       echo $GSL_LIB > /etc/ld.so.conf.d/ohpc.conf
+RUN echo /opt/ohpc/pub/compiler/gcc/9.4.0/lib64 >> /etc/ld.so.conf.d/ohpc.conf
 RUN ldconfig
 
 # User to run as

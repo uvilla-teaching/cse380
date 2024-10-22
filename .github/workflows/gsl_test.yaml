@@ -18,7 +18,7 @@ jobs:
        WORKDIR: ./lectures/13_testing/autotools_with_tests
      container:
        image: uvilla/class-ci:latest
-       options: --privileged
+       options: --user root --privileged
      name: GSL test
 
      steps:

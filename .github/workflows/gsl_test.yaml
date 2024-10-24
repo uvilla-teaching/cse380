@@ -18,12 +18,12 @@ jobs:
        WORKDIR: ./lectures/13_testing/autotools_with_tests
      container:
        image: uvilla/class-ci:latest
-       options: --user 1001 --privileged
+       options: --user root --privileged
      name: GSL test
 
      steps:
         - name: Checkout code
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
         - name: Query modules loaded
           run:  module list
         - name: Configure

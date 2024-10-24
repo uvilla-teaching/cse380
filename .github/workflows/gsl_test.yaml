@@ -26,6 +26,8 @@ jobs:
           uses: actions/checkout@v4
         - name: Query modules loaded
           run:  module list
+        - name: Where am I
+          run:  pwd
         - name: Configure
           run: cd $WORKDIR && ml gsl && autoreconf -f -i && ./configure
         - name: Build and test  

@@ -15,6 +15,9 @@
  *  Data conversion is performed during write operation.
  */
 
+#include<stdio.h>
+#include<stdlib.h>
+
 #include "hdf5.h"
 
 #define DATASETNAME "DoubleArray"
@@ -27,20 +30,20 @@ void usage()
 {
   printf("\nUsage: h5_write [filename] [val]\n\n");
   printf("   where \n");
-  printf("   - filename is the name of the output file \n"     
-  printf("   - val is the value of entry 00 \n\n");
+  printf("   - filename is the name of the output file \n");     
+  printf("   - val is the value of the additive shift \n\n");
   exit(1);
 }
 int main(int argc, char *argv[])
 {
-    double data00;
+    double bias;
     char * fname;
     if(argc != 3)
         usage();
     else
     {
         fname = argv[1];
-        data00 = atof(argv[2]);
+        bias = atof(argv[2]);
     }
 
     hid_t   file, dataset;       /* file and dataset handles */
@@ -55,16 +58,8 @@ int main(int argc, char *argv[])
      */
     for (j = 0; j < NX; j++)
         for (i = 0; i < NY; i++)
-            data[j][i] = i + j;
+            data[j][i] = (i + j)/(j+0.01) + bias;
 
-    data[0][0] = data00;
-    /*
-     * 0+eps 1 2 3 4 5
-     * 1 2 3 4 5 6
-     * 2 3 4 5 6 7
-     * 3 4 5 6 7 8
-     * 4 5 6 7 8 9
-     */
 
     /*
      * Create a new file using H5F_ACC_TRUNC access,

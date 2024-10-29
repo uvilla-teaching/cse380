@@ -5,4 +5,5 @@ h5_write.exe: h5_write.c
 
 clean:
 	rm -f h5_write.exe
+	rm -f *.h5
 

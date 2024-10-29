@@ -81,7 +81,6 @@ int main(int argc, char *argv[])
      * We will store little endian INT numbers.
      */
     datatype = H5Tcopy(H5T_NATIVE_DOUBLE);
-    status   = H5Tset_order(datatype, H5T_ORDER_LE);
 
     /*
      * Create a new dataset within the file using defined dataspace and
@@ -92,7 +91,7 @@ int main(int argc, char *argv[])
     /*
      * Write the data to the dataset using default transfer properties.
      */
-    status = H5Dwrite(dataset, H5T_NATIVE_DOUBLE, H5S_ALL, H5S_ALL, H5P_DEFAULT, data);
+    status = H5Dwrite(dataset, datatype, H5S_ALL, H5S_ALL, H5P_DEFAULT, data);
 
     /*
      * Close/release resources.

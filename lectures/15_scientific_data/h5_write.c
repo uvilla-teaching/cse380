@@ -17,15 +17,32 @@
 
 #include "hdf5.h"
 
-#define H5FILE_NAME "SDS.h5"
-#define DATASETNAME "IntArray"
+#define DATASETNAME "DoubleArray"
 #define NX          5 /* dataset dimensions */
 #define NY          6
 #define RANK        2
 
-int
-main(void)
+
+void usage()
 {
+  printf("\nUsage: h5_write [filename] [val]\n\n");
+  printf("   where \n");
+  printf("   - filename is the name of the output file \n"     
+  printf("   - val is the value of entry 00 \n\n");
+  exit(1);
+}
+int main(int argc, char *argv[])
+{
+    double data00;
+    char * fname;
+    if(argc != 3)
+        usage();
+    else
+    {
+        fname = argv[1];
+        data00 = atof(argv[2]);
+    }
+
     hid_t   file, dataset;       /* file and dataset handles */
     hid_t   datatype, dataspace; /* handles */
     hsize_t dimsf[2];            /* dataset dimensions */
@@ -40,7 +57,7 @@ main(void)
         for (i = 0; i < NY; i++)
             data[j][i] = i + j;
 
-    data[0][0] += 1e-6;
+    data[0][0] = data00;
     /*
      * 0+eps 1 2 3 4 5
      * 1 2 3 4 5 6
@@ -54,7 +71,7 @@ main(void)
      * default file creation properties, and default file
      * access properties.
      */
-    file = H5Fcreate(H5FILE_NAME, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
+    file = H5Fcreate(fname, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
 
     /*
      * Describe the size of the array and create the data space for fixed

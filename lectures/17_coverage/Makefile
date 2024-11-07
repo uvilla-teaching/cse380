@@ -16,9 +16,9 @@ check: hello-coverage.exe
 	./hello2-coverage.exe
 
 report: check
-	#./lcov/bin/lcov --zerocounters
-	./lcov/bin/lcov --directory . --capture --output-file lcov.info
-	./lcov/bin/genhtml -t "Example" -o html ./lcov.info 
+	#lcov --zerocounters
+	lcov --directory . --capture --output-file lcov.info
+	genhtml -t "Example" -o html ./lcov.info 
 
 clean:
 	rm -rf *.exe

@@ -21,7 +21,7 @@ RUN yum -y install bc wget zlib-devel perl-core perl-Digest-MD5 perl-IO-Compress
 # Add Bats
 RUN yum -y install bats
 # Add lcov
-ENV lcov_ver="2.0"
+ENV lcov_ver="1.16"
 RUN wget https://github.com/linux-test-project/lcov/releases/download/v$lcov_ver/lcov-$lcov_ver.tar.gz -P /tmp
 RUN cd /tmp; tar xfz /tmp/lcov-$lcov_ver.tar.gz
 RUN cd /tmp/lcov-$lcov_ver && make install

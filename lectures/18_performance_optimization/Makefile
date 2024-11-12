@@ -17,5 +17,5 @@ clean: clean-profile
 	rm -rf *.exe
 
 clean-profile:
-	rm gmon.out
+	rm -f gmon.out
 

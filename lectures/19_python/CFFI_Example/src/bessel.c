@@ -14,6 +14,6 @@ double bessel_j0(double x)
 
 void vbessel_j0(double * x, double * y, int size)
 {
-    for(int i(0); i < size; ++i)
+    for(int i=0; i < size; ++i)
     y[i] = gsl_sf_bessel_j0 (x[i]);
 }

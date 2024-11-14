@@ -20,12 +20,12 @@ if __name__ == "__main__":
 
     # Pass numpy arrays
     n = 10
-    x = np.random.uniform(n)
+    x = np.random.uniform(size=n)
     y = np.zeros_like(x)
     
     x_ptr = ffi.cast("double *", x.ctypes.data)
     y_ptr = ffi.cast("double *", y.ctypes.data)
     
-    mylib.vbessel_j0(x_ptr, y_ptr, x.size())
+    mylib.vbessel_j0(x_ptr, y_ptr, x.size)
 
-    [print("j0({0:1.4f}) = {1:1.4f}".format(xi,yi) for xi,yi in zip(x,y))]  
+    [print("j0({0:1.4f}) = {1:1.4f}".format(x[i],y[i])) for i in range(n)]  

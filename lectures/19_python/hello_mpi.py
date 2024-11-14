@@ -28,11 +28,11 @@ def hello_mpi ( ):
   p = comm.Get_size()
 
   if ( id == 0 ):
-    print ""
-    print "HELLO_MPI:"
-    print "  P", id, ":  There are ", p, " MPI processes running."
+    print("")
+    print("HELLO_MPI:")
+    print("  P", id, ":  There are ", p, " MPI processes running.")
 
-  print "  P", id, ":  Hello, world!"
+  print("  P", id, ":  Hello, world!")
 
   return
 

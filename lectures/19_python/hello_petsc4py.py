@@ -90,11 +90,11 @@ for row in range(rstart, rend):
     if j < n - 1:
         column = row + 1
         A[row, column] = -1.0 / h**2
-""""""
+"""
 At this stage, any exchange of information required in the matrix assembly
 process has not occurred. We achieve this by calling `Mat.assemblyBegin` and
 then `Mat.assemblyEnd`.
-""""""
+"""
 A.assemblyBegin()
 A.assemblyEnd()
 

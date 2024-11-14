@@ -26,6 +26,6 @@ if __name__ == "__main__":
     x_ptr = ffi.cast("double *", x.ctypes.data)
     y_ptr = ffi.cast("double *", y.ctypes.data)
     
-    mylib.bessel_j0(x_ptr, y_ptr, x.size())
+    mylib.vbessel_j0(x_ptr, y_ptr, x.size())
 
     [print("j0({0:1.4f}) = {1:1.4f}".format(xi,yi) for xi,yi in zip(x,y))]  

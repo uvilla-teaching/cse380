@@ -21,7 +21,7 @@ void bessel_j0(const std::vector<double> & x,  std::vector<double> & y)
     y[i] = gsl_sf_bessel_j0 (x[i]);
 }
 
-namespace pybind11 py;
+namespace py=pybind11;
 // Help function to cast a pybind array to a std::vector
 std::vector<double> array_to_vector(py::array_t<double> &array) {
     py::buffer_info info = array.request();
@@ -36,12 +36,12 @@ std::vector<double> array_to_vector(py::array_t<double> &array) {
     return vec;
 }
 
-PYBIND11_MODULE(example, m) {
+PYBIND11_MODULE(bessel, m) {
     m.def("hello_pybind", &hello_pybind, "A simple function writing on screen");
-    m.def("bessel_j0", &bessel_j0, "Compute j0(x)", py::arg("x")=1.);
+    m.def("bessel_j0", static_cast<double(*)(double)>(&bessel_j0), "Compute j0(x)", py::arg("x"));
     m.def("bessel_j0", [](py::array_t<double> & x) {
-       py::array_t<double> y(x.shape);
-       bessel_j0( array_to_vector(x), array_to_vector(y) );
-       return y; 
-    })
-}
+       std::vector<double> yv(x.request().shape[0]);
+       bessel_j0( array_to_vector(x), yv );
+       return py::array_t<double>(x.request().shape, yv.data()); 
+    });
+};

@@ -5,3 +5,8 @@ bessel.so: bessel.o
 
 bessel.o: bessel.c bessel.h
 	$(CC) -I$(GSL_BASE_DIR)/include -fPIC -c bessel.c
+
+.PHONY: clean
+
+clean:
+	rm -f bessel.o bessel.so
